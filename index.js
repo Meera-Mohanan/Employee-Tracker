@@ -1,7 +1,10 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const table = require('console.table');
+// Load environment variables from .env file
+require('dotenv').config(); 
 const mysql = require('mysql2');
+
 
 // Read MySQL password from environment variable
 const password = process.env.MYSQL_PASSWORD;
@@ -11,7 +14,8 @@ const db = mysql.createConnection({
     host: 'localhost',
     // MySQL Username
     user: 'root',
-    password: 'abcd',
+    // Read password from environment variable
+    password: process.env.DB_PASSWORD,
     database: 'employee_db'
 },
     console.log(`Connected to the employee_db database.`)
