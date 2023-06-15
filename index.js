@@ -3,12 +3,15 @@ const inquirer = require('inquirer');
 const table = require('console.table');
 const mysql = require('mysql2');
 
+// Read MySQL password from environment variable
+const password = process.env.MYSQL_PASSWORD;
+
 //set connection to database
 const db = mysql.createConnection({
     host: 'localhost',
     // MySQL Username
     user: 'root',
-    password: 'abcd',
+    password: password,
     database: 'employee_db'
 },
     console.log(`Connected to the employee_db database.`)
