@@ -2,7 +2,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const table = require('console.table');
 // Load environment variables from .env file
-require('dotenv').config(); 
+require('dotenv').config();
 const mysql = require('mysql2');
 
 
