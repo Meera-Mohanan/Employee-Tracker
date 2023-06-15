@@ -3,6 +3,7 @@
     "cli-table": "^0.3.11",
     "console.table": "^0.10.0",
     "fs": "^0.0.1-security",
+    "i": "^0.3.7",
     "inquirer": "^8.2.5",
     "mysql2": "^3.3.5"
   },
